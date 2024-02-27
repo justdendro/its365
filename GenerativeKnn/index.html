@@ -3,7 +3,7 @@
 
     
     <head>
-        <title>Generate Furnace Heat Images per Conditions</title>
+        <title>Generate chess pieces per type</title>
         <meta charset="utf-8" />
         <link rel="icon" type="image/x-icon" href="./favicon.png" />
         <link
@@ -32,44 +32,22 @@
       
         <div>Type conditions here: </div>
    
- <table>
- 
-  <tr>
-     <td> Ng </td>
-     <td> <input type="text" style="border:3px solid #F7730E;" value="0" id="testInput1"/> </td>
-
-       <td> Pci </td>
-     <td>   <input type="text" style="border:3px solid #F7730E;" value="175" id="testInput2"/> </td>
-
-       <td> H </td>
-     <td>  <input type="text" style="border:3px solid #F7730E;" value="0" id="testInput3"/> </td>
-
-       <td> Wp </td>
-     <td>   <input type="text" style="border:3px solid #F7730E;" value="0" id="testInput4"/> </td>
-
-       <td> Ph</td>
-     <td>       <input type="text" style="border:3px solid #F7730E;" value="300" id="testInput5"/>  </td>
-  </tr>
-        
-       
-  <tr>
-     <td> Ox </td>
-     <td>  <input type="text" style="border:3px solid #F7730E;" value="24" id="testInput6"/> </td>
-
-     <td>Ow</td>
-     <td>    <input type="text" style="border:3px solid #F7730E;" value="7" id="testInput7"/> </td>
-
-     <td> Hbt</td>
-     <td>     <input type="text" style="border:3px solid #F7730E;" value="1459" id="testInput8"/> </td>
-
-     <td> Wm</td>
-     <td>  <input type="text" style="border:3px solid #F7730E;" value="12" id="testInput9"/> </td>
-
-    <td> Wr</td>
-     <td>     <input type="text" style="border:3px solid #F7730E;" value="308750" id="testInput10"/>  </td>
-  </tr> 
- 
- </table> 
+<table>
+        <tr>
+            <td>Pawn</td>
+            <td><input type="range" min="0" max="1" step="0.01" value="0" id="pawnInput" /></td>
+            <td>Horse</td>
+            <td><input type="range" min="0" max="1" step="0.01" value="0" id="horseInput" /></td>
+            <td>Rook</td>
+            <td><input type="range" min="0" max="1" step="0.01" value="0" id="rookInput" /></td>
+            <td>Bishop</td>
+            <td><input type="range" min="0" max="1" step="0.01" value="0" id="bishopInput" /></td>
+            <td>Queen</td>
+            <td><input type="range" min="0" max="1" step="0.01" value="0" id="queenInput" /></td>
+            <td>King</td>
+            <td><input type="range" min="0" max="1" step="0.01" value="0" id="kingInput" /></td>
+        </tr>
+</table>
 
        
          <button id="get-time" py-click="my_gen_function()"  class="py-button">Generate</button>
