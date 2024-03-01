@@ -1,4 +1,4 @@
-<html>
+s<html>
 
 
     
@@ -88,14 +88,14 @@
                     king = float(Element('kingInput').element.value)
                 
                 # Generate chess piece based on attribute values
-                piece = generatePiece(pawn, horse, rook, bishop, queen, king)
+                piece = generateChessPiece(pawn, horse, rook, bishop, queen, king)
                 
                 # Display generated piece
                 plt.imshow(piece)
                 plt.axis('off')
                 plt.show()
                 
-                def generateChessPiece(pawn, horse, rook, bishop, queen, king):
+                def generatePiece(pawn, horse, rook, bishop, queen, king):
                 
                     piece = np.zeros((100, 100, 3))
                     return piece
