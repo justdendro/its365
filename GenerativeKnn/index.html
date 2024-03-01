@@ -78,14 +78,12 @@ s<html>
                 import matplotlib.pyplot as plt
                 import numpy as np
 
-                    
-                def generateChessPiece():
-                    pawn = float(Element('pawnInput').element.value)
-                    horse = float(Element('horseInput').element.value)
-                    rook = float(Element('rookInput').element.value)
-                    bishop = float(Element('bishopInput').element.value)
-                    queen = float(Element('queenInput').element.value)
-                    king = float(Element('kingInput').element.value)
+                pawn = float(Element('pawnInput').element.value)
+                horse = float(Element('horseInput').element.value)
+                rook = float(Element('rookInput').element.value)
+                bishop = float(Element('bishopInput').element.value)
+                queen = float(Element('queenInput').element.value)
+                king = float(Element('kingInput').element.value)
                 
                 # Generate chess piece based on attribute values
                 piece = generateChessPiece(pawn, horse, rook, bishop, queen, king)
@@ -95,7 +93,7 @@ s<html>
                 plt.axis('off')
                 plt.show()
                 
-                def generatePiece(pawn, horse, rook, bishop, queen, king):
+                def generateChessPiece(pawn, horse, rook, bishop, queen, king):
                 
                     piece = np.zeros((100, 100, 3))
                     return piece
