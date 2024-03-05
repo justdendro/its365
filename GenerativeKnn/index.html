@@ -45,7 +45,15 @@ s<html>
         </tr>
 </table>
 
+ 
+<button id="get-time" py-click="generateChessPiece()"  class="py-button">Generate</button>
+                                       
        
+        <p id="current-val"></p>
+  
+        <div id="test-output"></div>
+
+        <div id="pandas-output"></div>
 
         
 
@@ -134,7 +142,7 @@ s<html>
 
                     ##################################################
 
-                    def my_gen_function():
+                    def generateChessPiece():
                     
                         test_x = get_np_conditions_vector()
 
@@ -177,15 +185,6 @@ s<html>
                 </script>
          
         </section>
-
-<button id="get-time" py-click="my_gen_function()"  class="py-button">Generate</button>
-                                       
-       
-        <p id="current-val"></p>
-  
-        <div id="test-output"></div>
-
-        <div id="pandas-output"></div>
 
         
     </body>
