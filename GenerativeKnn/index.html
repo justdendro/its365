@@ -75,7 +75,9 @@
                 
 
                 <script type="py">
-                import matplotlib.pyplot as plt
+
+                    
+                    import matplotlib.pyplot as plt
                     import matplotlib.tri as tri
                     import numpy as np
                     import pandas as pd
@@ -87,19 +89,19 @@
                     ###########################################
 
 
-                    url1 = ("https://github.com/justdendro/its365/blob/main/GenerativeKnn/PD_ids_train.csv")
+                    url1 = ("https://rcalix1.github.io/ProbabilityDensityFunctionsFromNeuralNets/experiments/2023/july2023/GANs/PyScriptExamples/example3/PD_ids_train.csv")
                     pd_ids_train = pd.read_csv(open_url(url1))
                     pd_ids_train_np = pd_ids_train.to_numpy()
                     pd_ids_train_np          = pd_ids_train_np[1:, 1:]
 
-                    url2 = ("https://github.com/justdendro/its365/blob/main/GenerativeKnn/PD_conditions_train.csv")
+                    url2 = ("https://rcalix1.github.io/ProbabilityDensityFunctionsFromNeuralNets/experiments/2023/july2023/GANs/PyScriptExamples/example3/PD_conditions_train.csv")
                     pd_conditions_train = pd.read_csv(open_url(url2))
                     pd_conditions_train_np = pd_conditions_train.to_numpy()
                     pd_conditions_train_np   = pd_conditions_train_np[1:, 1:]
 
                     #########################################################################################################
 
-                    url3 = ("https://github.com/justdendro/its365/blob/main/GenerativeKnn/PD_imgs_np_train.csv")
+                    url3 = ("https://rcalix1.github.io/ProbabilityDensityFunctionsFromNeuralNets/experiments/2023/july2023/GANs/PyScriptExamples/example3/PD_imgs_np_train.csv")
                     pd_imgs_np_train = pd.read_csv(open_url(url3))
                     pd_imgs_np_train_np = pd_imgs_np_train.to_numpy()
                     pd_imgs_np_train_np      = pd_imgs_np_train_np[1:, 1:]
@@ -127,14 +129,18 @@
                     ##################################################
 
                     def get_np_conditions_vector():
-                        c1 = float( Element('pawnInput').element.value )
-                        c2 = float( Element('bishopInput').element.value )
-                        c3 = float( Element('horseInput').element.value )
-                        c4 = float( Element('rookInput').element.value )
-                        c5 = float( Element('queenInput').element.value )
-                        c6 = float( Element('kingInput').element.value )
+                        c1 = float( Element('testInput1').element.value )
+                        c2 = float( Element('testInput2').element.value )
+                        c3 = float( Element('testInput3').element.value )
+                        c4 = float( Element('testInput4').element.value )
+                        c5 = float( Element('testInput5').element.value )
+                        c6 = float( Element('testInput6').element.value )
+                        c7 = float( Element('testInput7').element.value )
+                        c8 = float( Element('testInput8').element.value )
+                        c9 = float( Element('testInput9').element.value )
+                        c10 = float( Element('testInput10').element.value )
 
-                        conditions_list = [c1, c2, c3, c4, c5, c6]
+                        conditions_list = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10]
                         np_conditions_list = np.array(conditions_list)
                         np_conditions_list = np.expand_dims(np_conditions_list, axis=0)
 
@@ -142,7 +148,7 @@
 
                     ##################################################
 
-                    def generateChessPiece():
+                    def my_gen_function():
                     
                         test_x = get_np_conditions_vector()
 
@@ -172,6 +178,17 @@
 
                         ## Element('mpl').element.innerText = ""        ## use this to not accumulate imgs
                         display(fig1, target="mpl")
+                    
+                        #####################################################
+
+                        ## fig, ax = plt.subplots(1,2)
+                        ## ax[0].imshow(generated_img)
+                        ## ax[1].imshow(generated_img)
+                        ## ax[0].set_title("Gen: " + str_conditions)
+                        ## ax[1].set_title("real")
+                        ## Element('mpl').element.innerText = ""        ## use this to not accumulate imgs
+                        ## display(fig, target="mpl")
+   
                 </script>
          
         </section>
