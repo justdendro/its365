@@ -31,23 +31,23 @@
 <table>
         <tr>
             <td>Pawn</td>
-            <td><input type="range" min="0" max="1" step="0.01" value="0" id="pawnInput" /></td>
+            <td><input type="checkbox" value="1" id="pawnInput" /></td>
             <td>Bishop</td>
-            <td><input type="range" min="0" max="1" step="0.01" value="0" id="bishopInput" /></td>
+            <td><input type="checkbox" value="1" id="bishopInput" /></td>
             <td>Horse</td>
-            <td><input type="range" min="0" max="1" step="0.01" value="0" id="horseInput" /></td>
+            <td><input type="checkbox" value="1" id="horseInput" /></td>
             <td>Rook</td>
-            <td><input type="range" min="0" max="1" step="0.01" value="0" id="rookInput" /></td>
+            <td><input type="checkbox" value="1" id="rookInput" /></td>
             <td>Queen</td>
-            <td><input type="range" min="0" max="1" step="0.01" value="0" id="queenInput" /></td>
+            <td><input type="checkbox" value="1" id="queenInput" /></td>
             <td>King</td>
-            <td><input type="range" min="0" max="1" step="0.01" value="0" id="kingInput" /></td>
+            <td><input type="checkbox" value="1" id="kingInput" /></td>
         </tr>
 </table>
 
  
 <button id="get-time" py-click="my_gen_function()"  class="py-button">Generate</button>
-<button id="reset-button" onclick="resetSliders()" class="py-button">Reset Sliders</button>
+<button id="reset-button" onclick="resetCheckboxes()" class="py-button">Reset Checkboxes</button>
 <button id="clear-output" onclick="clearOutput()" class="py-button">Clear Output</button>
                                        
        
@@ -181,13 +181,13 @@
          
         </section>
         <script>
-        function resetSliders() {
-            document.getElementById('pawnInput').value = 0;
-            document.getElementById('horseInput').value = 0;
-            document.getElementById('rookInput').value = 0;
-            document.getElementById('bishopInput').value = 0;
-            document.getElementById('queenInput').value = 0;
-            document.getElementById('kingInput').value = 0;
+        function resetCheckboxes() {
+            document.getElementById('pawnInput').checked = false;
+            document.getElementById('horseInput').checked = false;
+            document.getElementById('rookInput').checked = false;
+            document.getElementById('bishopInput').checked = false;
+            document.getElementById('queenInput').checked = false;
+            document.getElementById('kingInput').checked = false;
         }
         function clearOutput() {
             document.getElementById('test-output').innerHTML = '';
