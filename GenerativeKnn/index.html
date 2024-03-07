@@ -10,16 +10,6 @@
             href="https://pyscript.net/latest/pyscript.css"
         />
         <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-        <script>
-        document.getElementById("reset-sliders").addEventListener("click", function() {
-            document.getElementById("pawnInput").value = 0;
-            document.getElementById("horseInput").value = 0;
-            document.getElementById("rookInput").value = 0;
-            document.getElementById("bishopInput").value = 0;
-            document.getElementById("queenInput").value = 0;
-            document.getElementById("kingInput").value = 0;
-        });
-        </script>
         <link rel="stylesheet" href="./assets/css/examples.css" />
     </head>
 
@@ -129,7 +119,7 @@
                     def predict(test_x):
                     
                         distances = [ euclidean_distance(test_x, x )  for x in pd_conditions_train_np    ]
-                        k = 3
+                        k = 2
                         k_neighbor_indices = np.argsort(distances)[:k]
                         selected_imgs_to_avg = [ pd_imgs_np_train_np[i].reshape((140, 80))  for i in k_neighbor_indices  ]
                     
@@ -199,7 +189,16 @@
                 </script>
          
         </section>
-
+        <script>
+        document.getElementById("reset-sliders").addEventListener("click", function() {
+            document.getElementById("pawnInput").value = 0;
+            document.getElementById("horseInput").value = 0;
+            document.getElementById("rookInput").value = 0;
+            document.getElementById("bishopInput").value = 0;
+            document.getElementById("queenInput").value = 0;
+            document.getElementById("kingInput").value = 0;
+        });
+        </script>
         
     </body>
 </html>
