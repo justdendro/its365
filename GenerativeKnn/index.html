@@ -47,7 +47,7 @@
 
  
 <button id="get-time" py-click="my_gen_function()"  class="py-button">Generate</button>
-<button id="reset-sliders" class="py-button">Reset Sliders</button>
+<button id="reset-button" onclick="resetSliders()" class="py-button">Reset Sliders</button>
                                        
        
         <p id="current-val"></p>
@@ -170,34 +170,24 @@
 
                         fig1, ax1 = plt.subplots()
                         plt.imshow(generated_img)                                     ##, cmap='summer')
-                        plt.colorbar(label="Colorbar", orientation="vertical")
+                        ## plt.colorbar(label="Colorbar", orientation="vertical")
                         ax1.set_title(str_conditions)
 
                         ## Element('mpl').element.innerText = ""        ## use this to not accumulate imgs
                         display(fig1, target="mpl")
-                    
-                        #####################################################
-
-                        ## fig, ax = plt.subplots(1,2)
-                        ## ax[0].imshow(generated_img)
-                        ## ax[1].imshow(generated_img)
-                        ## ax[0].set_title("Gen: " + str_conditions)
-                        ## ax[1].set_title("real")
-                        ## Element('mpl').element.innerText = ""        ## use this to not accumulate imgs
-                        ## display(fig, target="mpl")
    
                 </script>
          
         </section>
         <script>
-        document.getElementById("reset-sliders").addEventListener("click", function() {
-            document.getElementById("pawnInput").value = 0;
-            document.getElementById("horseInput").value = 0;
-            document.getElementById("rookInput").value = 0;
-            document.getElementById("bishopInput").value = 0;
-            document.getElementById("queenInput").value = 0;
-            document.getElementById("kingInput").value = 0;
-        });
+        function resetSliders() {
+            document.getElementById('pawnInput').value = 0;
+            document.getElementById('horseInput').value = 0;
+            document.getElementById('rookInput').value = 0;
+            document.getElementById('bishopInput').value = 0;
+            document.getElementById('queenInput').value = 0;
+            document.getElementById('kingInput').value = 0;
+        }
         </script>
         
     </body>
