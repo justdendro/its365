@@ -48,6 +48,7 @@
  
 <button id="get-time" py-click="my_gen_function()"  class="py-button">Generate</button>
 <button id="reset-button" onclick="resetSliders()" class="py-button">Reset Sliders</button>
+<button id="clear-output" onclick="clearOutput()" class="py-button">Clear Output</button>
                                        
        
         <p id="current-val"></p>
@@ -187,6 +188,11 @@
             document.getElementById('bishopInput').value = 0;
             document.getElementById('queenInput').value = 0;
             document.getElementById('kingInput').value = 0;
+        }
+        function clearOutput() {
+            document.getElementById('test-output').innerHTML = '';
+            document.getElementById('pandas-output').innerHTML = '';
+            document.getElementById('mpl').innerHTML = '';
         }
         </script>
         
