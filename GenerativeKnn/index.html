@@ -10,6 +10,16 @@
             href="https://pyscript.net/latest/pyscript.css"
         />
         <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+        <script>
+        document.getElementById("reset-sliders").addEventListener("click", function() {
+            document.getElementById("pawnInput").value = 0;
+            document.getElementById("horseInput").value = 0;
+            document.getElementById("rookInput").value = 0;
+            document.getElementById("bishopInput").value = 0;
+            document.getElementById("queenInput").value = 0;
+            document.getElementById("kingInput").value = 0;
+        });
+        </script>
         <link rel="stylesheet" href="./assets/css/examples.css" />
     </head>
 
@@ -47,6 +57,7 @@
 
  
 <button id="get-time" py-click="my_gen_function()"  class="py-button">Generate</button>
+<button id="reset-sliders" class="py-button">Reset Sliders</button>
                                        
        
         <p id="current-val"></p>
