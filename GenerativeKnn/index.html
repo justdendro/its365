@@ -201,6 +201,9 @@
          
         </section>
         <script>
+        function updateValue(checkbox) {
+            checkbox.value = checkbox.checked ? 1 : 0;
+        }
         function resetCheckboxes() {
             document.getElementById('pawnInput').checked = false;
             document.getElementById('horseInput').checked = false;
