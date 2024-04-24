@@ -35,7 +35,7 @@
 </head>
 <body>
   
-  <h1> Wine Quality NN </h1>
+  <h1> Concrete Compressive Strength Predictor </h1>
   
   
   
@@ -43,17 +43,16 @@
     <div id = "boxes1">
          
               
-  <input type="text" id="box1" value="38"> x1 <br/>
-  <input type="text" id="box2" value="0"> x2 <br/>
-  <input type="text" id="box3" value="300"> x3  <br/>
-  <input type="text" id="box4" value="27">x4 <br/>
-  <input type="text" id="box5" value="7" >x5 <br/>
-  <input type="text" id="box6" value="87618"> x6 <br/>
-  <input type="text" id="box7" value="0"> x7 <br/>
-  <input type="text" id="box8" value="300"> x8  <br/>
-  <input type="text" id="box9" value="27"> x9 <br/>
-  <input type="text" id="box10" value="7" > x10 <br/>
-  <input type="text" id="box11" value="87618"> x11 <br/>
+  <input type="text" id="box1" value="540"> Cement (kg/m^3)<br/>
+  <input type="text" id="box2" value="0"> Blast Furnace Slag (kg/m^3)<br/>
+  <input type="text" id="box3" value="0"> Fly Ash (kg/m^3)<br/>
+  <input type="text" id="box4" value="162"> Water (kg/m^3)<br/>
+  <input type="text" id="box5" value="2.5"> Superplasticizer (kg/m^3)<br/>
+  <input type="text" id="box6" value="1040"> Coarse Aggregate (kg/m^3)<br/>
+  <input type="text" id="box7" value="676"> Fine Aggregate (kg/m^3)<br/>
+  <input type="text" id="box8" value="28"> Age (days)<br/>
+  
+  <button onclick="clearValues()">Clear Values</button>
 
     </div> 
       
@@ -65,7 +64,7 @@
         <div id = "boxes2">
               
            
-              <h2>Inference </h2>
+              <h2>Predicted Concrete Compressive Strength </h2>
               
                <div id="predictions">
                </div>
@@ -73,6 +72,18 @@
 
         </div>
   
+  <script>
+    function clearValues() {
+      document.getElementById("box1").value = "";
+      document.getElementById("box2").value = "";
+      document.getElementById("box3").value = "";
+      document.getElementById("box4").value = "";
+      document.getElementById("box5").value = "";
+      document.getElementById("box6").value = "";
+      document.getElementById("box7").value = "";
+      document.getElementById("box8").value = "";
+    }
+  </script>
 
 </body>
 </html>
